@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #0B0F17;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            width: 1440px; 
+            height: 800px; 
+            margin: 0 auto; 
+            overflow: hidden; 
+            color: #fff;
+        }
+
+        header img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            position: absolute;
+            z-index: 1;
+            opacity: 0.8;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            z-index: 2;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+            z-index: 2;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .form-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .form-container, .address-section {
+            flex: 1;
+            min-width: 45%;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #0B0F17;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #444;
+        }
+
+        .address-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+        }
+        .address-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .address-section p {
+            margin: 10px 0;
+        }
+
+        .address-section p strong::before {
+            content: "\1F4CD"; 
+            margin-right: 8px;
+        }
+
+        .faq {
+            margin-top: 20px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .map-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #0B0F17;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer img {
+        width: 1440px; 
+        height: 80px; 
+        position: relative; 
+        top: -42px; 
+        object-fit: cover; 
+    }
+        
+        @media (max-width: 768px) {
+            .form-section {
+                flex-direction: column;
+            }
+            .form-container, .address-section {
+                min-width: 100%;
+            }
+        }
+    </style>
+    <header>
+        <img src="1.png" alt="Top Image Placeholder"> 
+        <h1>Get in Touch with Us</h1>
+    </header>
+    <main>
+        <h1>Contact Us</h1>      
+        <section class="form-section">
+          <div class="form-container">
+            <h2>Send us a Message</h2>
+            <form action="form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Email ID" required>
+                <input type="text" name="contact" placeholder="Contact Number" required>
+                <input type="text" name="city" placeholder="City" required>
+                <textarea name="message" rows="5" placeholder="Message" required></textarea>
+
+                <div style="margin: 10px 0;">
+                    <input type="checkbox" id="notRobot" name="notRobot" required>
+                    <label for="notRobot">I am not a robot</label>
+                </div>                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+            <div class="address-section">
+                <h2>Address</h2>
+                <p><strong>Corporate Office:</strong></p>
+                <p>139/141, Solaris 1, B-Wing, 1st Floor,<br>
+                Saki Vihar Road, Powai, Opp. L&T Gate No 6,<br>
+                Andheri (E), Mumbai-400072, Maharashtra.</p>
+
+              <p><strong>Manufacturing Plant:</strong></p>
+                <p>338, International House, Baska, Halol,<br>
+                Dist. Panchmahals, Pin 389 350, Gujarat (INDIA).</p>
+
+                <p><strong>Call us:</strong></p>
+                <p>+91 93 2212 1271<br>
+                +91 77 3814 1738</p>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Got any questions? We got you covered.</h2>
+            <div class="faq-item">
+                <div class="faq-question">What is a power semiconductor device?</div>
+                <div class="faq-answer">Power semiconductor devices are used for switching and rectifying power in electrical systems.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What are power semiconductors used for?</div>
+                <div class="faq-answer">Power semiconductors are used for controlling and converting electrical energy efficiently.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What is the classification of power semiconductor devices?</div>
+                <div class="faq-answer">Power semiconductors are classified into diodes, thyristors, MOSFETs, and IGBTs.</div>
+            </div>
+        </section>
+        <section class="map-section">
+            <h2>Our Location</h2>
+            <p>Find us at our corporate office or manufacturing plant.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.633461180691!2d72.88896981006856!3d19.123729382016023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c80e7065cd01%3A0x6762fa5c67ba4ac0!2sRIR%20POWER%20ELECTRONICS%20LIMITED%20(Formerly%20Ruttonsha%20International%20Rectifier%20Ltd.)!5e0!3m2!1sen!2sin!4v1734256275386!5m2!1sen!2sin" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+    <footer >
+    <img src="footer.png" alt="Footer Logo">
+    </footer> 
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(question) {
+            question.addEventListener('click', function() {
+                this.nextElementSibling.classList.toggle('faq-answer');
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
